@@ -1,30 +1,76 @@
-# Matt Pocock Skills
+# Agent Skills
 
-A collection of agent skills (slash commands and behaviors) loaded by Claude Code. Skills are organized into buckets and consumed by per-repo configuration emitted by `/setup-matt-pocock-skills`.
+Vocabulary for conversational project work with coding agents, including the inherited skill flows and the wiki workflow being designed here.
 
 ## Language
 
 **Issue tracker**:
-The tool that hosts a repo's issues: GitHub Issues, Linear, a local `.scratch/` markdown convention, or similar. Skills like `to-tickets`, `to-spec`, and `triage` read from and write to it.
+The place where Issues retain their identity, discussion, and coordination information.
 _Avoid_: backlog manager, backlog backend, issue host
 
 **Issue**:
-A single tracked unit of work inside an **Issue tracker**: a bug, task, spec, or slice produced by `to-tickets`.
-_Avoid_: ticket (use only when quoting external systems that call them tickets, or for a **Decision ticket**, see below)
+Something unresolved with a persistent identity: a problem, desired change, question, or decision. Its assignment consists of the need, intended outcome, scope, and resolution conditions.
+_Avoid_: ticket (except when quoting an external system or referring to a Decision ticket), spec, pitch
+
+**Bug**:
+An Issue about observed or suspected behavior that violates the expected system contract.
+
+**Change**:
+An Issue requesting a desired improvement, including a capability, maintenance, refactoring, or documentation.
+
+**Investigation**:
+An Issue whose immediate deliverable is an evidence-backed answer or decision.
+
+**Quick capture**:
+A short record sufficient to recover a need or discovery, with whatever context is already known.
+
+**Backlog**:
+Captured Issues awaiting a decision or attention. Inclusion does not imply a commitment to deliver them.
+
+**Ready**:
+The condition in which an Issue's assignment is clear enough for pickup, although its detailed system proposal may still need development. Readiness is distinct from priority, assignment, or an instruction to start.
+_Avoid_: fully specified, approved for merge
+
+**Pickup**:
+A developer taking responsibility for pursuing a clear Issue.
+_Avoid_: capture
+
+**Work overlap**:
+Concurrent Issues affecting the same system behavior or implementation area. Overlap does not by itself establish a blocking dependency.
+
+**Blocking dependency**:
+A relationship where an Issue needs another Issue's outcome before it can progress.
+_Avoid_: shared file, wiki reference
+
+**Wiki**:
+The maintained system contract: precise behavior, constraints, domain concepts, and durable decisions. It describes intended behavior even when an implementation has bugs.
+_Avoid_: backlog, activity log, as-built inventory
+
+**Wiki page**:
+A concise, coherent piece of system information, such as an explanation of sandbox file synchronization. Related behavior, rules, constraints, and design decisions can belong in the same page.
+_Avoid_: one claim per note
+
+**Setup**:
+Preparing a repository for the wiki workflow, including its full initial wiki, Issue templates, and CI/CD.
+
+**Wikilink**:
+A reference to another wiki page, usable in prose or as a diagram node's navigation target.
+
+**Wiki viewer**:
+A read-only browser experience reached from a PR, with a graph for exploring connected wiki pages and understanding proposed changes. People discuss the proposal verbally in a call; the viewer does not own review comments or approvals.
+
+**Pull request (PR)**:
+A concrete proposed resolution expressed through changes to the system contract and implementation as applicable.
+_Avoid_: Issue, specification
+
+**PR description**:
+The explanation accompanying a particular proposed change, including its approach and acceptance evidence.
+_Avoid_: system contract
+
+### Inherited skill flows
 
 **Decision ticket**:
-A `wayfinder` unit: a child **Issue** of a `wayfinder:map` holding a *question* whose resolution is a decision, not a slice of a build to execute. The **decision** qualifier is what keeps it distinct from an implementation ticket; `wayfinder` introduces the term, then uses "ticket".
+A decision-seeking child Issue in the inherited wayfinding flow.
 
 **Triage role**:
-A canonical state-machine label applied to an **Issue** during triage (e.g. `needs-triage`, `ready-for-afk`). Each role maps to a real label string in the **Issue tracker** via `docs/agents/triage-labels.md`.
-
-## Relationships
-
-- An **Issue tracker** holds many **Issues**
-- An **Issue** carries one **Triage role** at a time
-- A **Decision ticket** is an **Issue** (a child of a `wayfinder:map`)
-
-## Flagged ambiguities
-
-- "backlog" was previously used to mean both the *tool* hosting issues and the *body of work* inside it. Resolved: the tool is the **Issue tracker**; "backlog" is no longer used as a domain term.
-- "backlog backend" / "backlog manager". Resolved: collapsed into **Issue tracker**.
+A classification indicating the attention an Issue needs in the inherited triage flow.

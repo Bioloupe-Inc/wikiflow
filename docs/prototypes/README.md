@@ -45,4 +45,4 @@ These are brainstorms, not selected features or architecture. Preserve the core 
 
 When revisiting, try these against realistic wiki content and a concrete conversation: find what changed, understand its consequences, inspect an unchanged constraint, follow a diagram link, and return without losing your place. Pay particular attention to typography, hierarchy, density, useful previews, and keyboard navigation. Motion should make those transitions feel continuous; the underlying interactions still need to earn their place.
 
-Keep this source on `codex/wiki-viewer-prototype`. The current verdict is deferred, with no winning layout. Retain only validated design decisions in the main project.
+The source is retained here on `main` at the user's request, including the original commits from `codex/wiki-viewer-prototype`. The verdict remains deferred, with no winning layout; publishing the study does not approve a design or promote it into the plugin.

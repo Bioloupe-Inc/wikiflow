@@ -1,15 +1,15 @@
 {
-  "name": "mattpocock",
+  "name": "wikiflow",
   "owner": {
-    "name": "Matt Pocock",
-    "url": "https://www.aihero.dev"
+    "name": "JoziGila",
+    "url": "https://github.com/JoziGila"
   },
-  "description": "Matt Pocock's skills for real engineering, as an installable Claude Code plugin.",
+  "description": "WikiFlow agent skills for Claude Code.",
   "plugins": [
     {
-      "name": "mattpocock-skills",
+      "name": "wikiflow",
       "source": "./",
-      "description": "Matt Pocock's agent skills for real engineering (grilling, spec/ticket flows, TDD, code review, domain modelling and more).",
+      "description": "WikiFlow agent skills for planning, implementation, review, and shared system knowledge.",
       "category": "engineering",
       "keywords": [
         "engineering",
