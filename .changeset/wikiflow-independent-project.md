@@ -2,7 +2,7 @@
 "wikiflow": major
 ---
 
-Establish WikiFlow as an independent project, retaining Matt Pocock's original MIT license and attribution. Rename the package, plugin, and marketplace to `wikiflow`; install from `JoziGila/wikiflow`.
+Establish WikiFlow as an independent project, retaining Matt Pocock's original MIT license and attribution. Rename the package, plugin, and marketplace to `wikiflow`; install from `Bioloupe-Inc/wikiflow`, which the Bioloupe-Inc organization owns.
 
 Rename `ask-matt` to `ask-wikiflow` and `setup-matt-pocock-skills` to `setup-wikiflow`. Update their references, documentation, and local skill links. Existing installations need the new names and install source.
 

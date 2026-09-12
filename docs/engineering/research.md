@@ -13,10 +13,10 @@ Reach for it when the next step is *finding something out* from outside the work
 | What you need | Reach for |
 | --- | --- |
 | An external fact a decision is waiting on | `research` |
-| A decision made *with* you, by interview | [grilling](https://github.com/JoziGila/wikiflow/blob/main/docs/productivity/grilling.md) |
-| A durable architecture decision, written into `CONTEXT.md` and ADRs | [grill-with-docs](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/grill-with-docs.md) |
-| To find out whether an approach works in your codebase | [prototype](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/prototype.md) |
-| A plan too big to hold in one session | [wayfinder](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/wayfinder.md) |
+| A decision made *with* you, by interview | [grilling](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/productivity/grilling.md) |
+| A durable architecture decision, written into `CONTEXT.md` and ADRs | [grill-with-docs](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/grill-with-docs.md) |
+| To find out whether an approach works in your codebase | [prototype](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/prototype.md) |
+| A plan too big to hold in one session | [wayfinder](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/wayfinder.md) |
 
 The line between `research` and `grill-with-docs` is the **shelf life of what comes back**. Research produces short-lived assets: what this library's auth mechanism does as of this week. An ADR records a decision you keep. If what you are producing is a decision rather than a fact, you are [grilling](https://www.aihero.dev/ai-coding-dictionary/grilling), not researching.
 
@@ -70,4 +70,4 @@ No, it now fires them for you. In the unreleased changes since v1.1, a charting 
 
 ## Where it fits
 
-A reach-for-it-anytime standalone that feeds the thinking skills rather than sitting in the build chain. Its file is something to take *into* the flow: [grilling](https://github.com/JoziGila/wikiflow/blob/main/docs/productivity/grilling.md) and [grill-with-docs](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/grill-with-docs.md) ask sharper questions when the facts are already on the table, and [to-spec](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/to-spec.md) can synthesise against it. [wayfinder](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/wayfinder.md) is the one skill that invokes it directly, resolving each research ticket on its map with a `/research` subagent. For the whole map, see [ask-wikiflow](https://github.com/JoziGila/wikiflow/blob/main/docs/engineering/ask-wikiflow.md).
+A reach-for-it-anytime standalone that feeds the thinking skills rather than sitting in the build chain. Its file is something to take *into* the flow: [grilling](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/productivity/grilling.md) and [grill-with-docs](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/grill-with-docs.md) ask sharper questions when the facts are already on the table, and [to-spec](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/to-spec.md) can synthesise against it. [wayfinder](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/wayfinder.md) is the one skill that invokes it directly, resolving each research ticket on its map with a `/research` subagent. For the whole map, see [ask-wikiflow](https://github.com/Bioloupe-Inc/wikiflow/blob/main/docs/engineering/ask-wikiflow.md).

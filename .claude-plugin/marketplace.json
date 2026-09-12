@@ -1,8 +1,8 @@
 {
   "name": "wikiflow",
   "owner": {
-    "name": "JoziGila",
-    "url": "https://github.com/JoziGila"
+    "name": "Bioloupe",
+    "url": "https://github.com/Bioloupe-Inc"
   },
   "description": "WikiFlow agent skills for Claude Code.",
   "plugins": [

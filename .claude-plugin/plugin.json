@@ -3,11 +3,11 @@
   "version": "1.2.3",
   "description": "WikiFlow agent skills for planning, implementation, review, and shared system knowledge.",
   "author": {
-    "name": "JoziGila",
-    "url": "https://github.com/JoziGila"
+    "name": "Bioloupe",
+    "url": "https://github.com/Bioloupe-Inc"
   },
-  "homepage": "https://github.com/JoziGila/wikiflow",
-  "repository": "https://github.com/JoziGila/wikiflow",
+  "homepage": "https://github.com/Bioloupe-Inc/wikiflow",
+  "repository": "https://github.com/Bioloupe-Inc/wikiflow",
   "license": "MIT",
   "keywords": [
     "engineering",

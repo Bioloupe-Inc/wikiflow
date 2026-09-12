@@ -7,14 +7,14 @@ Keep install commands consistent with these blocks. WikiFlow is distributed from
 <canonical-block name="claude-code">
 
 ```bash
-claude plugin marketplace add JoziGila/wikiflow
+claude plugin marketplace add Bioloupe-Inc/wikiflow
 claude plugin install wikiflow@wikiflow
 ```
 
 Or, from inside a session:
 
 ```text
-/plugin marketplace add JoziGila/wikiflow
+/plugin marketplace add Bioloupe-Inc/wikiflow
 /plugin install wikiflow@wikiflow
 ```
 
@@ -27,7 +27,7 @@ The plugin ships exactly the promoted engineering and productivity skills. Manag
 <canonical-block name="skills-sh-whole-set">
 
 ```bash
-npx skills@latest add JoziGila/wikiflow
+npx skills@latest add Bioloupe-Inc/wikiflow
 ```
 
 Pick the skills and agents you want. Include `setup-wikiflow` for the current tracker-based engineering flow.
@@ -39,7 +39,7 @@ For a single skill:
 <canonical-block name="skills-sh-one-skill">
 
 ```bash
-npx skills@latest add JoziGila/wikiflow --skill=<name>
+npx skills@latest add Bioloupe-Inc/wikiflow --skill=<name>
 ```
 
 ```bash

@@ -2,7 +2,7 @@
 
 Every promoted skill has a human-facing page at `docs/<bucket>/<skill-name>.md`, mirroring `skills/engineering/` and `skills/productivity/`. Add or update the page when a skill is added, renamed, or changes behavior. Rename or move the page with the skill. Non-promoted buckets get no docs page.
 
-These pages belong to WikiFlow and are read in this repository. Use relative links within the repo, or canonical `https://github.com/JoziGila/wikiflow/blob/main/...` links when an absolute URL is needed. Links to upstream issues and other external sources retain their original destinations.
+These pages belong to WikiFlow and are read in this repository. Use relative links within the repo, or canonical `https://github.com/Bioloupe-Inc/wikiflow/blob/main/...` links when an absolute URL is needed. Links to upstream issues and other external sources retain their original destinations.
 
 A page helps a person choose a skill and understand its result. It explains the available behavior, while proposed wiki-workflow changes belong in the design records. Link to the root README's [installation section](../README.md#installation) instead of copying commands; [.agents/install-block.md](./install-block.md) owns their wording.
 
@@ -28,7 +28,7 @@ Use one to three short sections in the skill's vocabulary to explain its central
 
 ### Common questions
 
-Use bold questions followed by concise answers. Prefer questions from the current conversation, relevant repository issues, and `CHANGELOG.md`. Use `gh issue list --repo JoziGila/wikiflow --search "<skill-name>" --state all` when current issues would help. Historical upstream reports remain useful evidence, but their status is not WikiFlow's status.
+Use bold questions followed by concise answers. Prefer questions from the current conversation, relevant repository issues, and `CHANGELOG.md`. Use `gh issue list --repo Bioloupe-Inc/wikiflow --search "<skill-name>" --state all` when current issues would help. Historical upstream reports remain useful evidence, but their status is not WikiFlow's status.
 
 When evidence is thin, answer only questions a reader needs to use this skill. Do not pad the section. State limitations directly and distinguish current behavior from proposed changes.
 

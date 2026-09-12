@@ -22,14 +22,14 @@ Choose one route per agent to avoid duplicate skills. The Claude Code plugin inc
 ### Claude Code
 
 ```bash
-claude plugin marketplace add JoziGila/wikiflow
+claude plugin marketplace add Bioloupe-Inc/wikiflow
 claude plugin install wikiflow@wikiflow
 ```
 
 Or, from inside a session:
 
 ```text
-/plugin marketplace add JoziGila/wikiflow
+/plugin marketplace add Bioloupe-Inc/wikiflow
 /plugin install wikiflow@wikiflow
 ```
 
@@ -37,7 +37,7 @@ Or, from inside a session:
 ### Codex and other agents
 
 ```bash
-npx skills@latest add JoziGila/wikiflow
+npx skills@latest add Bioloupe-Inc/wikiflow
 ```
 
 Pick the skills and agents you want. Include `setup-wikiflow` for the current tracker-based engineering flow.

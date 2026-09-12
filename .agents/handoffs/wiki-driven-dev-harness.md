@@ -42,4 +42,4 @@ The [prototype, feedback, and six directions to explore later](../../docs/protot
 
 ## Repository identity
 
-WikiFlow is the independent `JoziGila/wikiflow` repository. GitHub fork detachment, repository rename, package/plugin identity, installation wording, and the `ask-wikiflow` / `setup-wikiflow` skill renames are complete. Matt Pocock's original license, attribution, and history are preserved. These identity changes do not implement the replacement setup workflow.
+WikiFlow is the independent `Bioloupe-Inc/wikiflow` repository, owned by the Bioloupe-Inc organization since 2026-09-12. GitHub fork detachment, repository rename, ownership transfer, package/plugin identity, installation wording, and the `ask-wikiflow` / `setup-wikiflow` skill renames are complete. Matt Pocock's original license, attribution, and history are preserved. These identity changes do not implement the replacement setup workflow.
