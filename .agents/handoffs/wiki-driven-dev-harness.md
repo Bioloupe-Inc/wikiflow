@@ -2,7 +2,7 @@
 
 Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `mattpocock/skills`), branch `claude/wiki-driven-dev-harness-wwzk0n`. The initial handoff was committed as `6f88017`; the design discussion continued in Codex. This document is self-contained: it carries the original design handoff, a description of how the repo's skills work today, the grill so far, and the open frontier.
 
-**Read Parts 4 and 5 first for the current discussion.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; Part 5 records the subsequent workflow discussion, template proposal, and independent repository direction.
+**Read Parts 4 and 5 first for the current discussion.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; Part 5 records the subsequent workflow discussion, locked template set, and independent repository direction.
 
 **What the next session is for:** continue the grill. Do not draft `SKILL.md` files or the linter until the frontier below is empty and the user confirms shared understanding.
 
@@ -305,9 +305,17 @@ Updated 2026-09-12 after the user asked to research and lock down issue template
 - Discoveries made during other work should be cheap to preserve: find an existing issue or capture a short new one with known context, then continue the current task. Capture does not trigger mandatory grilling, a branch, or implementation.
 - Keep grilling conceptually continuous as understanding and proposed changes evolve. Separate mandatory issue-grilling and PR-grilling stages add a distinction the user challenged.
 
-### Concrete template proposal
+### Locked issue template set
 
-The requested research is in [issue-templates.md](../research/issue-templates.md). The [v1 template proposal](../design/issue-templates.md) contains exact Bug, Change, and Investigation body drafts, quick-capture examples, and shared authoring rules. The recommendation is three templates, with sparse initial content and a blank-issue escape hatch. The user has not yet reviewed this exact set. No GitHub templates, labels, or native issue types have been installed.
+The user confirmed "Lock it" on 2026-09-12 after reviewing the recommendation. The agreed set is **Bug, Change, Investigation**. The [locked v1 design](../design/issue-templates.md) contains their bodies, quick-capture examples, and shared authoring rules; the supporting [research](../research/issue-templates.md) remains available.
+
+- Bug captures observed or suspected incorrect behavior.
+- Change captures desired improvements, including features, maintenance, and deferred ideas. It can develop into a lightweight PRD.
+- Investigation captures a question or decision whose immediate deliverable is an answer supported by evidence.
+- Quick capture can be short within any template; the same issue develops during grilling. Allow a blank issue when classification is unclear.
+- Backlog and readiness are separate from template choice. PRs can exist without issues.
+
+This locks the content design. No GitHub templates, labels, or native issue types have been installed.
 
 ### Independent repository direction
 
@@ -321,4 +329,4 @@ The inherited package identity, install instructions, and upstream links still n
 
 ### Still open
 
-Approval boundaries, precise issue states, issue closure versus release, work discovery and ownership, merge gates, and the remaining wiki structure and verification mechanics still need discussion. The template proposal does not resolve those questions or authorize implementing the full harness.
+Approval boundaries, precise issue states, issue closure versus release, work discovery and ownership, merge gates, and the remaining wiki structure and verification mechanics still need discussion. The locked template set does not resolve those questions or authorize implementing the full harness.

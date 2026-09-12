@@ -1,8 +1,10 @@
-# Issue templates: v1 proposal
+# Issue templates: locked v1
 
 Date: 2026-09-12
 
-Purpose: settle a small set of content templates for the wiki-driven workflow. These are concrete drafts for review, not installed GitHub templates or new issue states. The proposed set is **Bug, Change, Investigation**.
+Status: agreed by the user with "Lock it" on 2026-09-12.
+
+The agreed content template set for the wiki-driven workflow is **Bug, Change, Investigation**, with the shared authoring rules and bodies below. GitHub installation and tracker configuration remain pending.
 
 ## Shared authoring rules
 
@@ -103,4 +105,4 @@ If installed in a target repository, place the templates in `.github/ISSUE_TEMPL
 
 Agents using a direct issue API must follow the same authoring rules. Browser form validation is not a general enforcement mechanism for all creation paths. See the [primary-source research](../research/issue-templates.md) for documented platform behavior and the limits of this inference.
 
-The inherited `triage` skill currently assumes bug/enhancement categories and the inherited `to-tickets` skill targets implementation-ready slices. Those skills will need reconciliation with this design when workflow implementation is authorized. This draft does not change their behavior.
+The inherited `triage` skill currently assumes bug/enhancement categories and the inherited `to-tickets` skill targets implementation-ready slices. Those skills will need reconciliation with this design when workflow implementation is authorized. Recording this decision does not change their behavior.
