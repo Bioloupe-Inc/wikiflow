@@ -17,6 +17,23 @@ The existing [setup skill](../../skills/engineering/setup-wikiflow/SKILL.md) sca
 
 [Astra skill and prompt guidance](../../docs/research/wiki-workflow.md#skill-and-prompt-design) informs the replacement's instruction design.
 
+[OpenWiki findings](../../docs/research/openwiki.md) list the mechanics worth borrowing for building and maintaining the wiki: code-derived indexes and link checks, evidence hashes as a change lens, the materiality test, a user-authored brief, and a static graph export. The clone lives beside this repository at `../openwiki`. [Spec Kit and OpenSpec findings](../../docs/research/spec-driven-tools.md) add the review order, delta vocabulary, right-sizing rule, and the question of growing the wiki from changes rather than building it all at setup; those clones live at `../spec-kit` and `../openspec`.
+
+## Candidate decisions from the reference study
+
+Proposed on 2026-09-12 after reading OpenWiki, Spec Kit, and OpenSpec together with the ADRs. None is accepted; each needs its own discussion and, if agreed, an ADR.
+
+- The wiki outranks the code. Because the contract describes intended behavior even when the implementation is wrong, drift is a symmetric signal a person adjudicates. No automated pass may rewrite pages from source.
+- Ground contract sections in tests, not code. A cited test that changes means the proof changed; code changing under green tests is not a contract change. Test citations also give a page a coverage measure with no model involved.
+- The page is the only authored unit. Indexes, backlinks, and hierarchy are derived from links; folders are avoided or derived; one routing page is written last. Moving a page must break nothing.
+- Headings are the addressable unit. Issues, tests, and pages reference a section by wikilink and anchor; git diffs at that granularity; the link checker catches renames. No ids or sidecars.
+- An Issue links the pages it expects to affect. That set is the agent's reading list (those pages plus one hop) and the reviewer's expected-change set: pages changed but not linked are a scope-change signal to record.
+- The viewer produces the call's agenda from derived facts only: the assignment, pages added, changed, or removed with neighborhoods, unedited pages whose cited tests changed, and links broken or introduced. It shows no model summaries.
+- Setup builds a complete wiki with every page marked draft; a page becomes stable the first time a PR touches it under review. This keeps the full initial wiki while staying honest about what has been verified.
+- Removing a page is a contract removal: the same PR must fix every inbound link, and CI enforces it.
+- A PR that changes tests but no wiki page gets a non-blocking prompt asking whether the contract changed.
+- Anything shown to reviewers by tooling must be a derived fact, never model output, so that the tool stays trustworthy.
+
 ## Deferred: wiki viewer
 
 Parked at the user's request on 2026-09-12. The prototype is partly in the right direction but needs better UI and UX; no variant is selected. Keep the intent in [ADR-0006](../../docs/adr/0006-write-concise-linked-wiki-pages.md), and resume viewer work only when the user returns to it.
