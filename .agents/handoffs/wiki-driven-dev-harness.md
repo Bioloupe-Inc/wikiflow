@@ -2,7 +2,7 @@
 
 Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `mattpocock/skills`), branch `claude/wiki-driven-dev-harness-wwzk0n`. The initial handoff was committed as `6f88017`; the design discussion continued in Codex. This document is self-contained: it carries the original design handoff, a description of how the repo's skills work today, the grill so far, and the open frontier.
 
-**Read Part 4 first for the latest locked decision.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; other workflow alternatives discussed later are not settled.
+**Read Parts 4 and 5 first for the current discussion.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; Part 5 records the subsequent workflow discussion, template proposal, and independent repository direction.
 
 **What the next session is for:** continue the grill. Do not draft `SKILL.md` files or the linter until the frontier below is empty and the user confirms shared understanding.
 
@@ -292,3 +292,33 @@ The remaining wiki structure, setup, migration, and implementation questions fro
 ### Resume here
 
 Keep the Issue definition and the removal of mandatory pitch terminology fixed. Continue exploring how an Issue becomes actionable and how a proposed resolution is accepted, using GitHub as the concrete example. Recompute the question frontier from the decisions actually settled; do not blindly repeat the original six questions as if their prerequisites were independent. No skills, linter, or workflow implementation has been authorized yet.
+
+## Part 5: continuing the workflow discussion
+
+Updated 2026-09-12 after the user asked to research and lock down issue templates, then to disconnect the repository from upstream because it will diverge significantly.
+
+### Direction established in the continued discussion
+
+- The user accepted Q1: the wiki on `main` is the accepted contract for the merged version. This is intended behavior, not a literal account of every bug in the implementation. Proposed contract changes can develop on a branch, normally landing with the corresponding implementation.
+- A PR does not necessarily require an issue. The earlier suggestion to find or create an issue for every request was dropped.
+- Issues can hold unstarted work and rough ideas. Backlog does not mean commitment, and an issue need not begin as a complete PRD.
+- Discoveries made during other work should be cheap to preserve: find an existing issue or capture a short new one with known context, then continue the current task. Capture does not trigger mandatory grilling, a branch, or implementation.
+- Keep grilling conceptually continuous as understanding and proposed changes evolve. Separate mandatory issue-grilling and PR-grilling stages add a distinction the user challenged.
+
+### Concrete template proposal
+
+The requested research is in [issue-templates.md](../research/issue-templates.md). The [v1 template proposal](../design/issue-templates.md) contains exact Bug, Change, and Investigation body drafts, quick-capture examples, and shared authoring rules. The recommendation is three templates, with sparse initial content and a blank-issue escape hatch. The user has not yet reviewed this exact set. No GitHub templates, labels, or native issue types have been installed.
+
+### Independent repository direction
+
+The user explicitly wants this to become an independent project, using `mattpocock/skills` as the starting base. Future design should serve this workflow without an upstream compatibility or contribution requirement.
+
+At inspection, local git had only `origin` pointing to `https://github.com/JoziGila/skills.git`; there was no `upstream` remote. GitHub still reported `fork: true` with parent `mattpocock/skills`. The repository was public, approximately 1.6 MB, with no child forks, no issues or PRs returned across all states, no stars or subscribers, and GitHub Issues and Wiki disabled.
+
+**Detachment is still pending.** The connected GitHub tools do not expose the repository administration action. GitHub documents `Settings > General > Danger Zone > Leave fork network`; it preserves git commit metadata, is permanent, and warns of losing repository-level metadata. Source: [GitHub detaching a fork](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/detaching-a-fork).
+
+The inherited package identity, install instructions, and upstream links still need a considered update as the independent project takes shape. Detaching the fork relationship does not update those files. Original license and attribution remain in place.
+
+### Still open
+
+Approval boundaries, precise issue states, issue closure versus release, work discovery and ownership, merge gates, and the remaining wiki structure and verification mechanics still need discussion. The template proposal does not resolve those questions or authorize implementing the full harness.
