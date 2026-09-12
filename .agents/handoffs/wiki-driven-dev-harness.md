@@ -6,6 +6,24 @@ Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `matt
 
 **What the next session is for:** continue the grill. Do not draft `SKILL.md` files or the linter until the frontier below is empty and the user confirms shared understanding.
 
+## Resume checkpoint
+
+The user ended this session by asking to commit all work, finish the handoff, and merge to `main`. Resume from `main` after that merge. This authorizes publishing the discussion artifacts; it does not settle the unanswered workflow questions or authorize building the harness.
+
+Current artifacts:
+
+- [Locked issue templates](../design/issue-templates.md): Bug, Change, Investigation; lightweight capture; readiness and the issue/wiki boundary.
+- [Issue template research](../research/issue-templates.md): platform capabilities and the rationale for the small template set.
+- [Issue/wiki/PR research](../research/issue-wiki-pr-workflow.md): earlier source comparison. Its recommendations are historical inputs; Parts 5 and 6 of this handoff supersede broader suggestions about continually evolving issues and issue-based PRDs.
+
+**Next unanswered question:** should developers choose their next issue from prioritized ready work, or should the lead assign work?
+
+The last assistant proposal was self-assignment within agreed priorities, one accountable human owner per active issue, ownership visible from clarification onward and transferable at handoff, and a Codex check for existing branches/PRs and overlapping work before starting. **The user has not answered or approved that proposal.** The request to commit and merge must not be interpreted as approval of it.
+
+The repo philosophy was inspected read-only. The inherited main flow uses human-invoked orchestration and explicit confirmation of shared understanding before acting, with autonomous implementation and verification within the agreed scope. Small work can stay in one conversation without separate spec/ticket artifacts. Experimental `loop-me` encourages preparing as much as possible before human checkpoints. These are observations about the inherited skills, not a newly agreed invocation policy for our harness.
+
+No skills or runtime code were changed, and issue templates were not installed. GitHub fork detachment remains pending as described in Part 5. The next session should continue the ownership discussion, then branch/PR timing and coordination, without reopening the settled issue definitions.
+
 ## Suggested skills
 
 If the next harness has them, call the Skill tool for:
