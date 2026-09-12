@@ -2,7 +2,7 @@
 
 Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `mattpocock/skills`), branch `claude/wiki-driven-dev-harness-wwzk0n`. The initial handoff was committed as `6f88017`; the design discussion continued in Codex. This document is self-contained: it carries the original design handoff, a description of how the repo's skills work today, the grill so far, and the open frontier.
 
-**Read Parts 4 and 5 first for the current discussion.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; Part 5 records the subsequent workflow discussion, locked template set, and independent repository direction.
+**Read Part 6 first, then Parts 4 and 5 for the current discussion.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; Part 5 records the locked template set and independent repository direction. Part 6 clarifies readiness, stable issue scope, and the issue/wiki boundary.
 
 **What the next session is for:** continue the grill. Do not draft `SKILL.md` files or the linter until the frontier below is empty and the user confirms shared understanding.
 
@@ -330,3 +330,37 @@ The inherited package identity, install instructions, and upstream links still n
 ### Still open
 
 Approval boundaries, precise issue states, issue closure versus release, work discovery and ownership, merge gates, and the remaining wiki structure and verification mechanics still need discussion. The locked template set does not resolve those questions or authorize implementing the full harness.
+
+## Part 6: readiness, issue/wiki boundary, and team cadence
+
+Recorded 2026-09-12. The user clarified that issues must be clarified before they are ready for implementation-agent ingestion, accepted the issue/wiki boundary with "Sure", and moved on with "Ok next" after discussing responsibility for readiness.
+
+### Readiness and stable intent
+
+- Anyone with the appropriate project access, including a nontechnical requester speaking to Codex, can capture a need. Codex can check for duplicates and help clarify the request.
+- Captured issues may remain in the backlog without being ready for implementation. The issue description can develop during clarification.
+- Ready means the intended outcome, scope, and resolution conditions are agreed, with no unresolved decision that prevents the intended execution. The issue and its relevant wiki references together provide the assignment. Agents may still investigate technical facts and choose implementation details.
+- Once ready, the issue becomes a stable reference for the assignment. A material change to scope requires an explicit decision recorded in the history. Do not silently rewrite the request to match the implementation.
+- If implementation exposes a missing product decision, bring it back for clarification. Ready does not mean high priority, assigned, or instructed to start immediately.
+
+### Issue and wiki responsibilities
+
+- The issue owns a bounded problem or question, its motivation, desired outcome, scope, and conditions for resolution.
+- The wiki owns precise system behavior, rules, constraints, domain concepts, and durable architectural decisions. It remains useful after the issue closes.
+- A Bug identifies a violation of an existing contract; fixing it may need no wiki change. A Change requests an outcome whose precise system rules belong in proposed wiki edits. An Investigation asks a question; resulting durable system decisions belong in the wiki when applicable.
+- For behavior-changing work, settle the necessary system rules in proposed branch wiki changes before implementation pickup. Main's wiki remains the accepted contract of the merged version. The proposed wiki edits can share a draft PR with the later code; the exact timing and ownership of branch/PR creation still need discussion.
+- The earlier PRD analogy is qualified: an issue can contain substantial motivation, outcomes, and boundaries, but it should link to the detailed system specification in the wiki rather than become a competing living design document.
+
+### Existing cadence and responsibility
+
+The user has a daily developer standup, a weekly scheduled meeting with the boss, and ad hoc conversations with the boss.
+
+- Use the weekly boss meeting to agree priorities, desired outcomes, and significant product changes.
+- Use developer standup to coordinate ownership, surface blockers, and identify upcoming issues needing clarification.
+- Use ad hoc discussion for specific decisions that cannot wait. Codex prepares the context and concrete questions before involving the relevant people.
+- The developer preparing an issue is responsible for marking it ready after the relevant product decisions are agreed and the issue plus wiki provide a sufficient implementation contract. Involve the user or boss where their judgment is needed.
+- Issues may become ready between meetings. Meetings coordinate the work without becoming mandatory approval gates for every issue.
+
+### Next discussion
+
+How developers claim work and make it visible, including ownership during clarification, branch/draft-PR timing, and overlapping work. Exact tracker states, the instruction that starts implementation, review/merge authority, closure versus release, and the remaining wiki mechanics are still open. This records workflow decisions without installing or changing skills.

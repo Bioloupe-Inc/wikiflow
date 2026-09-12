@@ -4,14 +4,16 @@ Date: 2026-09-12
 
 Status: agreed by the user with "Lock it" on 2026-09-12.
 
+Readiness and issue/wiki responsibilities were clarified in the subsequent discussion on the same date.
+
 The agreed content template set for the wiki-driven workflow is **Bug, Change, Investigation**, with the shared authoring rules and bodies below. GitHub installation and tracker configuration remain pending.
 
 ## Shared authoring rules
 
 - Capture needs a clear title and enough context to recover the thought. A sentence can be enough. Include known evidence and where the discovery came from; distinguish observations from assumptions.
 - Optional prompts help develop the issue. Remove empty sections instead of filling them with guesses or boilerplate. Missing reproduction steps, success criteria, ownership, or a solution must not prevent capture.
-- Update the same issue as grilling clarifies the work. Keep the current understanding in the description and material reasoning in the discussion. There is one continuous clarification process, which can also refine the proposed PR.
-- Once work is taken on, clarify the intended resolution and any constraints needed for that work. This document does not prescribe a new approval gate or readiness status.
+- Update the same issue while grilling clarifies the request. Once it is ready for implementation, preserve its agreed outcome, scope, and resolution conditions as a stable reference. Record material scope changes explicitly rather than rewriting the request to match what was built.
+- Implementation agents only pick up ready issues. Ready means the issue and referenced wiki establish enough intent to proceed without inventing product decisions. Technical investigation and implementation choices can remain for the agent. Readiness is separate from priority, assignment, and an instruction to start now.
 - Link relevant wiki contracts and PRs. Avoid copying a full specification into multiple places. Use tracker properties and relationships for ownership, scheduling, and dependencies where available.
 - An issue is optional when a direct PR is sufficient. Capturing an issue does not authorize implementation or commit the team to doing it.
 
@@ -40,7 +42,7 @@ Saved filters appeared to reset after reloading while I was checking the dashboa
 
 ## 2. Change
 
-Use for desired capabilities, improvements, maintenance, refactoring, documentation, and deferred ideas. A substantial Change can develop into a lightweight PRD in the same issue. Technical work can state an engineering outcome without inventing an end-user story.
+Use for desired capabilities, improvements, maintenance, refactoring, documentation, and deferred ideas. A substantial Change can hold the motivation, outcome, and scope associated with a lightweight PRD. Precise system behavior and durable requirements belong in the wiki, linked from the issue. Technical work can state an engineering outcome without inventing an end-user story.
 
 Suggested title: `Keep dashboard filters between visits`
 
@@ -93,7 +95,7 @@ Findings can resolve the issue without code. Record the answer and supporting ev
 | Quick capture | A short use of a template. Allow a blank title/body route when classification is unclear. |
 | Idea | Usually an early Change or Investigation; detail can grow without a new issue. |
 | Backlog or deferred | Scheduling or disposition, independent of the template. |
-| PRD | The depth a Change issue can reach, not a fourth template. |
+| PRD | A useful analogy for the issue's motivation, outcome, and scope. The wiki owns precise system requirements. |
 | Feature, chore, refactor, docs | Uses of Change. Add separate templates only if practical intake needs justify them. |
 | Parent issue | Shared intent for independently coordinated work. Children need meaningful outcomes, not one issue per wiki link. |
 
