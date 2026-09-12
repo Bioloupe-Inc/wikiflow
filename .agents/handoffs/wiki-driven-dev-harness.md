@@ -1,6 +1,8 @@
 # Handoff: Wiki-Driven Development Harness, grill in progress
 
-Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `mattpocock/skills`), branch `claude/wiki-driven-dev-harness-wwzk0n`. Nothing has been committed; the branch is clean at `3cca18b`. The next session cannot clone, so this document is self-contained: it carries the original design handoff, a description of how the repo's skills work today, the grill so far, and the open frontier.
+Written 2026-09-12 from a session in the `JoziGila/skills` repo (a fork of `mattpocock/skills`), branch `claude/wiki-driven-dev-harness-wwzk0n`. The initial handoff was committed as `6f88017`; the design discussion continued in Codex. This document is self-contained: it carries the original design handoff, a description of how the repo's skills work today, the grill so far, and the open frontier.
+
+**Read Part 4 first for the latest locked decision.** Parts 1 to 3 preserve earlier context and proposals. Part 4 supersedes the earlier definition of an Issue; other workflow alternatives discussed later are not settled.
 
 **What the next session is for:** continue the grill. Do not draft `SKILL.md` files or the linter until the frontier below is empty and the user confirms shared understanding.
 
@@ -192,7 +194,7 @@ Facts are the agent's job (look them up); decisions are the user's. Done when th
 |---|---|---|
 | 1 | Replacement or parallel flow | **Replacement.** In a wiki-enabled repo, `/grill-with-wiki` replaces `grill-with-docs` → `to-spec` → `to-tickets`. The unmodified main flow stays for repos without a wiki. |
 | 2 | Fork-only or upstream-shaped | **Fork-only.** Ship in `in-progress/` so bucket rules apply, but don't constrain the design to what upstream would take. |
-| 3 | What a ticket is | **Reframed by the user:** a ticket is how we get from the wiki's current state to an approved new state of the wiki-spec. The code work is whatever closes that gap. This makes the tracker derivable from the wiki, not just a disposable view. |
+| 3 | What a ticket is | **Earlier framing, superseded by Part 4:** a ticket is how we get from the wiki's current state to an approved new state of the wiki-spec. The code work is whatever closes that gap. This initially suggested making the tracker derivable from the wiki. |
 
 Agent observations accepted without objection (treat as provisional, not settled):
 
@@ -248,6 +250,45 @@ Agent observations accepted without objection (treat as provisional, not settled
 - Fan-out band and note length threshold, the near-duplicate detection method, and the coverage soft-metric: all carried over from the original open questions, all "tune empirically".
 - Bootstrap mode ("pointed at a file, extract claims from code") and mediate mode ("pointed at a contested note") have not been discussed at all beyond the handoff's one line each.
 
-### Suggested next step for the new session
+### Suggested next step from the initial handoff (see Part 4 before resuming)
 
 Present the six open frontier questions again, take the answers, recompute the frontier from the queued list, and keep going until it is empty. Then, and only then, draft `SKILL.md` for `grill-with-wiki`, the graph-maintenance reference, `setup-wiki`, and the shape-linter spec, and run the loop on one feature in one module.
+
+## Part 4: latest locked decision, Issues are unresolved work
+
+Confirmed by the user with "Ok lock that" during the continued discussion on 2026-09-12.
+
+### Locked
+
+**An Issue gives something unresolved a persistent identity so people can coordinate around resolving it.** It can concern a bug, a desired capability, a question, or a decision. It need not contain a solution at creation.
+
+A useful Issue establishes what needs attention and why, who is taking responsibility, what would count as resolving it, and what blocks progress. These are information needs, not a newly mandated template or set of required fields.
+
+**Grilling develops an Issue until it is actionable.** Its description evolves into the current understanding of the problem and its resolution conditions. Discussion preserves the reasoning; the reader should not have to reconstruct the current proposal from comments. The Issue is not a second detailed specification competing with the wiki.
+
+| Object | Role |
+|---|---|
+| Wiki | The system's agreed behavior and constraints. |
+| Issue | Something we need to resolve or change, and why it matters. |
+| PR | A concrete proposed resolution, expressed through changes to the wiki and code as applicable, with verification evidence. |
+
+"Issue is the what, PR is the how" is a useful shorthand, but not an exact separation: a PR may change the specification as well as its implementation. The precise distinction is the unresolved problem or desired outcome versus a concrete proposed resolution.
+
+An Issue can survive an abandoned branch or PR: the original problem may still need another approach. It can also be resolved by a decision not to pursue the work, without changing code. Do not equate Issue closure with shipping an implementation or confirming a wiki claim.
+
+**Drop pitch as a mandatory concept or workflow stage.** A pitch can be useful when making a case to invest in an idea, but not every Issue needs one. Clarifying a bug must not require a sales proposal. An Issue requesting a wiki-state transition is a use of the Issue, not its universal definition.
+
+### Discussed, not locked
+
+- Whether `main`'s wiki describes only the merged system or may carry approved future behavior.
+- Whether a change normally uses one evolving wiki-and-code PR or separate specification and implementation PRs.
+- What agreement on an Issue authorizes, who gives it, and whether it is a required gate before implementation. PR merge requirements remain a separate open decision.
+- Issue sizing, when to split work, and how Issues relate to one or more PRs.
+- How ongoing work is discovered, conflicts are surfaced, and real blocking dependencies are determined. Do not assume every wiki link automatically creates a task dependency.
+- Confirmation and verification: a code citation establishes traceability, not evidence by itself that the code satisfies a claim. The earlier Q4 recommendation must not be treated as a sufficient correctness check.
+
+The remaining wiki structure, setup, migration, and implementation questions from Part 3 are still open. Do not treat assistant recommendations or explored alternatives as user-approved decisions.
+
+### Resume here
+
+Keep the Issue definition and the removal of mandatory pitch terminology fixed. Continue exploring how an Issue becomes actionable and how a proposed resolution is accepted, using GitHub as the concrete example. Recompute the question frontier from the decisions actually settled; do not blindly repeat the original six questions as if their prerequisites were independent. No skills, linter, or workflow implementation has been authorized yet.
